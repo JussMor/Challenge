@@ -1,0 +1,261 @@
+@import '../../../styles/sass/variables/_variables';
+@import '../../../styles/sass/mixins/_mixins';
+@import '../../../styles/sass/fonts/_fonts';
+
+
+.footer {
+    padding:80px 20px 40px;
+    position: relative;
+    background: url("../../../resources/images/bg_footer.jpg") no-repeat center top;
+    background-size: cover;
+    .header{ 
+        h2{
+            color: $color_white;
+            padding:0;
+            width: 800px;
+        }
+    }
+    .block{
+        display: flex;
+        flex-flow:column nowrap;
+        p{
+            color:$color_white;
+            font-family: $minion_pro_regular;
+            @include font16();
+            text-align: justify;
+        }
+        .blockLeft, .blockRight{
+            padding: 10px 0;
+        }
+    }
+    article{
+        border: 1px solid $color_white;
+        margin: 20px 0 0;
+        >ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow:column nowrap;
+            border-bottom: 1px solid $color_white;
+            li{
+                padding: 10px 0;
+                position: relative;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #4d4d4d;
+                &:first-child{
+                    padding-left:0;
+                }
+                &:last-child{
+                    padding-right:0;
+                    border-bottom:0;
+                    &:before{
+                        display: none;
+                    }
+                }
+                &:before{
+                    @include afterBefore();
+                    height: 5px;
+                    width: 5px;
+                    border-radius: 100%;
+                    top:13px;
+                    right: 0;
+                    background: $color_white;
+                    display: none;
+                }
+                a:not([href]):not([tabindex]){
+                    color: $color_white;
+                    font-family: $intro_regular;
+                    @include font12();
+                    cursor: pointer;
+                    position: relative;
+                    padding-bottom: 10px;
+                    &:after{
+                        @include afterBefore();
+                        height: 4px;
+                        width: 0;
+                        bottom:-2px;
+                        left: 0;
+                        background: $color_brown;
+                        overflow: hidden;
+                        visibility: hidden;
+                        transition: 0.4s;
+                    }
+                    &:hover, &:focus, &.active {
+                        &:after{
+                            width: 100%;
+                            overflow: visible;
+                            visibility: visible;
+                        }
+                        a{
+                            color: $color_brown;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom{
+            >ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-flow:column nowrap;
+                li{
+                    width: 100%;
+                    padding:10px 0;
+                    text-align: center;
+                    color:$color_white;
+                    font-family: $intro_regular;
+                    @include font16();
+                    border-bottom: 1px solid #4d4d4d;
+                    &:last-child{
+                        border:none;
+                    }
+                    a{
+                        color:$color_white;
+                        &:hover, &:focus{
+                            color: $color_brown;
+                        }
+                    }
+                    svg{
+                        height: 1.5em;
+                        width: 2em;
+                    }
+                    >div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:first-child{
+                            min-height: auto;
+                            margin-bottom: 20px;
+                        }
+                        &:last-child{
+                            min-height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .credits{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        margin-top: 40px;
+        li{
+            padding:0;
+            color: $color_white;
+            font-family: $intro_regular;
+            @include font12();
+            padding-left:16px;
+            &:first-child{
+                font-family: $minion_pro_regular;
+                @include font16();
+                position: relative;
+                padding-left:0;
+                padding-right:16px;
+                &:after{
+                    position: absolute;
+                    top:-5px;
+                    right:0;
+                    @include afterBefore();
+                    height: 25px;
+                    background: $color_white;
+                    width: 2px;
+                }
+            }
+            a{
+                text-decoration: underline;
+                color: $color_white;
+                &:hover, &:focus {
+                    color: $color_brown;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        padding:140px 20px 40px;
+        article{
+            margin: 60px 0 0;
+            >ul{
+                min-height: 80px;
+                flex-flow:row nowrap;
+                li{
+                    padding: 0 30px;
+                    width: auto;
+                    border:none;
+                    &:before{
+                        display: block;
+                    }
+                    &:last-child{
+                        border:none;
+                    }
+                }
+            }
+            .bottom{
+                >ul{
+                    flex-flow:row nowrap;
+                    li{
+                        border:none;
+                        border-right: 1px solid #4d4d4d;
+                        padding:0;
+                        width: 33.3333%;
+                        &:last-child{
+                            border:none;
+                        }
+                        >div{
+                            &:first-child{
+                                min-height: 80px;
+                                margin-bottom: 0;
+                                border-bottom: 1px solid #4d4d4d;
+                            }
+                            &:last-child{
+                                min-height: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 560px) {
+        .credits{
+            flex-flow:column nowrap;
+            li{
+                padding:0;
+                &:first-child{
+                    padding:0;
+                    margin-bottom:10px;
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .block{
+            flex-flow:row nowrap;
+            .blockLeft{
+                padding: 0 20px 0 5px; 
+            }
+            .blockRight{
+                padding: 0 5px 0 20px; 
+            }
+        }
+        article{
+            >ul{
+                li{
+                    padding: 0 60px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1240px) {
+        .content{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+}

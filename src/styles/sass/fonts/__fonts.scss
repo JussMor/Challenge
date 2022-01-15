@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap');
+
+$font_family_primary: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$intro_regular: "intro";
+$intro_rust: "intro_rust";
+$minion_pro_regular: "minion_pro_regular";
+$play_fair: 'Playfair Display', serif;
+
+@font-face {
+    font-family: 'intro';
+    src: url('../../../resources/fonts/Intro.otf') format("opentype");
+}
+@font-face {
+    font-family: 'intro_rust';
+    src: url('../../../resources/fonts/IntroRustG-Base2Line.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'minion_pro_regular.otf';
+    src: url('../../../resources/fonts/MinionPro-Regular.otf') format("opentype");
+}
+
+@mixin font-size($size){
+    font-size: $size * 1px;
+    font-size: $size * 0.1rem;
+    line-height: normal;
+}
+@mixin font10() {
+    @include font-size(10);
+}
+@mixin font12() {
+    @include font-size(12);
+}
+@mixin font14() {
+    @include font-size(14);
+}
+@mixin font16() {
+    @include font-size(16);
+}
+@mixin font18() {
+    @include font-size(18);
+}
+@mixin font20() {
+    @include font-size(20);
+}
+@mixin font22() {
+    @include font-size(22);
+}
+@mixin font24() {
+    @include font-size(24);
+}
+@mixin font26() {
+    @include font-size(26);
+}
+@mixin font28() {
+    @include font-size(28);
+}
+@mixin font30() {
+    @include font-size(30);
+}
+@mixin font50() {
+    @include font-size(50);
+}
+@mixin font58() {
+    @include font-size(58);
+}
+@mixin font200() {
+    @include font-size(200);
+}
+
