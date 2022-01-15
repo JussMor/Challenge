@@ -1,0 +1,53 @@
+@import '../../../../styles/sass/variables/_variables';
+@import '../../../../styles/sass/fonts/_fonts';
+@import '../../../../styles/sass/breakPoints/_breakPoints';
+@import '../../../../styles/sass/mixins/_mixins';
+
+
+
+.partners{
+    padding:40px 20px;
+    background: rgba($color_dark, 0.05);
+    .header{
+        span{
+            &:first-child{
+                .icon{
+                    @include rotate(180);
+                }
+            }
+        }
+        p{
+            width: 220px;
+            background: $color_dark;
+            height: 1px;
+            margin: 20px auto 0;
+        }
+    }
+    .item{
+        .picture{
+            .img{
+                height: 60px;
+                width: auto;
+                margin: 0 auto;
+            }
+        }
+    }
+    .partnerSlides{
+        margin: 30px 0 0;
+        .partnerSlides{
+            margin: 30px 0 0;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        padding:80px 20px 100px;
+        .partnerSlides{
+            margin: 70px 0 0;
+        }
+    }
+    @media screen and (min-width: 1240px) {
+        .content{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -29,7 +29,7 @@ export default function Gallery(props) {
           />
 
             {/* {galleryImages} */}
-
+            <div className={styles.number}>5 <span>of</span> 10</div>
         </div>
       </section>
     </>

@@ -5,15 +5,28 @@ import Gallery from "./Gallery/Gallery";
 import Testimonial  from "./Testimonials/Testimonial"
 import Hero from "./Hero/Hero";
 import Programs from "./Programs/Programs"
+import NavBar from "../../../components/layout/Navbar/Navbar";
+import Partners from "./Partners/Partners";
+import Contact from "./Contact/Contact";
 
 export default function Home() {
   return (
     <>
-      
-      {/* <Gallery /> */}
-      {/* <Testimonial/> */}
+    
+      <NavBar/>
+
       <Hero/>
+
       <Programs/>
+
+      {/* <Gallery /> */}
+
+      {/* <Testimonial/> */}
+
+      <Partners/>
+
+      <Contact/>
+      
       <Footer />
     </>
   );
