@@ -1,0 +1,417 @@
+@import '../../../../styles/sass/variables/_variables';
+@import '../../../../styles/sass/fonts/_fonts';
+@import '../../../../styles/sass/mixins/_mixins';
+
+
+
+.programs{
+    position: relative;
+    overflow: hidden;
+    .coffe1, .coffe2{
+        position: absolute;
+        display: none;
+    }
+    .coffe1{
+        top: 100px;
+        left: -130px;
+    }
+    .coffe2{
+        top: 600px;
+        right: -130px;
+    }
+    .programsContent{
+        padding:40px 20px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        .tabSliderNav{
+            .tabSlider{
+                .nameBackground{
+                    display: none;
+                }
+                nav{
+                    border-color:$color_gray_light;
+                    align-items: center;
+                    margin: 40px auto 0;
+                    justify-content: center;
+                    a{
+                        width: 220px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: none;
+                        border:none;
+                        height: 60px;
+                        font-family: $intro_regular;
+                        text-transform: uppercase;
+                        @include font22();
+                        color: $color_gray;
+                        border-radius: 0;
+                        margin: 0;
+                        padding: 0;
+                        position: relative;
+                        &:after{
+                            @include afterBefore();
+                            height: 4px;
+                            width: 0;
+                            bottom:-2px;
+                            left: 0;
+                            background: $color_dark;
+                            overflow: hidden;
+                            visibility: hidden;
+                            transition: 0.4s;
+                        }
+                        &:hover, &:focus, &.active{
+                            color: $color_dark;
+                            &:after{
+                                width: 100%;
+                                overflow: visible;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+                >div{
+                    padding: 30px 0;
+                }
+                .top{
+                    position: relative;
+                    display: flex;
+                    .imgContainer{
+                        .img{
+                            max-width: 400px;
+                            height: auto;
+                        }
+                    }
+                    .content{
+                        margin-top: 0;
+                        color:$color_dark;
+                        padding-left: 20px;
+                        h3{
+                            font-weight: 700;
+                            color: $color_dark2;
+                            @include font26();
+                            font-family: $play_fair;
+                        }
+                        ul{
+                            margin: 8px 0;
+                            li{
+                                display: flex;
+                                align-items: center;
+                                font-family: $minion_pro_regular;
+                                @include font16();
+                                &:not(:last-child) {
+                                    margin-bottom: 15px;
+                                }
+                                .img{
+                                    margin-right: 16px;
+                                    width: 28px;
+                                    height: 28px;;
+                                }
+                            }
+                        }
+                        p{
+                            font-weight: 700;
+                            color: $color_dark;
+                            @include font30();
+                            font-family: $play_fair;
+                        }
+                        .button{
+                            background: $color_dark;
+                            text-transform: uppercase;
+                            border: 1px solid $color_dark;
+                            border-radius: 0;
+                            color:$color_white;
+                            font-family: $intro_regular;
+                            font-weight: 400;
+                            @include font14();
+                            width: 245px;
+                            height: 48px;
+                            cursor: pointer;
+                            transition: 0.6s;
+                            margin-top:14px;
+                            &:hover, &:focus{
+                                background: transparent;
+                                border-color: $color_brown;
+                                color:$color_brown;
+                            }
+                        }
+                    }
+                }
+                h4{
+                    color:$color_dark;
+                    margin:0 0 20px;
+                    font-family: $intro_regular;
+                    @include font18();
+                    display: flex;
+                }
+                .middle{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-flow: row wrap;
+                    > div{
+                        width: 50%;
+                        margin-top: 40px;
+                        &:last-child {
+                            width: 100%;
+                            h4{
+                                width: 100%;
+                            }
+                        }
+                        h4{
+                            border-top: 1px solid $color_gray_light;
+                            padding:20px 0 0;
+                            min-height:auto; 
+                            align-items: flex-end;
+                            width: 90%;
+                            br{
+                                display: none;
+                            }
+                        }
+                        ul{
+                            li{
+                                width: 95%;
+                                color:$color_blue;
+                                font-family: $minion_pro_regular;
+                                @include font16();
+                                line-height: 35px;
+                            }
+                        }
+                    }
+                }
+                .bottom{
+                    margin: 40px 0 0;
+                    .table{
+                        border:1px solid $color_gray;
+                        display: flex;
+                        width: auto;
+                        flex-flow: column nowrap;
+                        width: 100%;
+                        article{
+                            display: flex;
+                            align-items: center;
+                            min-height: 36px;
+                            &:not(:last-child){
+                                border-bottom:1px solid $color_gray;
+                            }
+                            .icon{
+                                width: 50px;
+                                min-height: 36px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                svg{
+                                    width: 14px;
+                                    height: 14px;;
+                                }
+                            }
+                            .list{
+                                border-left: 1px solid $color_gray;
+                                color:$color_blue;
+                                font-family: $minion_pro_regular;
+                                @include font16();
+                                flex:1;
+                                padding:0 20px;
+                                span{
+                                    display: block;
+                                    padding: 5px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:after{
+        @include afterBefore();
+        background: url("../../../../resources/images/coffes.png") no-repeat right bottom;
+        bottom: 0;
+        width: 1186px;
+        height: 480px;
+        right: 0;
+        background-size: contain;
+    }
+    @media screen and (max-width: 700px) {
+        .programsContent{
+            .tabSliderNav{
+                .tabSlider{
+                    nav{
+                        flex-flow: column;
+                        border:none;
+                    }
+                    .top{
+                        flex-flow: column nowrap;
+                        .imgContainer{
+                            .img{
+                                max-width: none;
+                                width: 100%;
+                            }
+                        }
+                        .content{
+                            margin-top: 20px;
+                            padding-left: 0;
+                            text-align: center;
+                            ul{
+                                margin: 20px 0;
+                                li{
+                                    justify-content: center;
+                                    &:not(:last-child) {
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .middle{
+                        flex-flow: column nowrap;
+                        >div{
+                            width: 100%;
+                            h4{
+                                width: 100%;
+                            }
+                            ul{
+                                li{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .programsContent{
+            .tabSliderNav{
+                .tabSlider{
+                    position: relative;
+                    nav{
+                        margin: 80px auto 0;
+                    }
+                    >div{
+                        padding: 80px 0;
+                    }
+                    .middle{
+                        > div{
+                            width: 33.33333%;
+                            margin-top: 80px;
+                            &:last-child {
+                                width: 33.33333%;
+                                h4{
+                                    width: 80%;
+                                }
+                            }
+                            h4{
+                                width: 80%;
+                                min-height: 82px;
+                            }
+                            ul{
+                                li{
+                                    width: 90%;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .nameBackground{
+                        position: absolute;
+                        color: $light;
+                        right: 0;
+                        @include font200();
+                        font-family: $intro_regular;
+                        display: block;
+                        text-transform: uppercase;
+                        top: 76px;
+                    }
+                    .top{
+                        flex-flow: row nowrap;
+                        .imgContainer{
+                            .img{
+                                max-width: none;
+                                width: 550px;
+                            }
+                        }
+                        .content{
+                            margin-top: 0;
+                            padding-left: 30px;
+                            h3{
+                                @include font30();
+                            }
+                            ul{
+                                margin: 40px 0 10px;
+                                li{
+                                    &:not(:last-child) {
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                            p{
+                                @include font58();
+                            }
+                            .button{
+                                height: 58px;
+                                margin-top:16px;
+                            }
+                        }
+                    }
+                    .bottom{
+                        margin-top:60px;
+                        .table{
+                            width: 700px;
+                            article{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .coffe1, .coffe2{
+            display: block;
+        }
+    }
+    @media screen and (min-width: 1240px) {
+        .programsContent{
+            padding:80px 0 40px;
+            max-width: 1200px;
+            .tabSliderNav{
+                .tabSlider{
+                    .top{
+                        .imgContainer{
+                            .img{
+                                width: 650px;
+                            }
+                        }
+                        .content{
+                            margin-top: 22px;
+                            padding-left: 60px;
+                            ul{
+                                margin: 62px 0 12px;
+                                li{
+                                    &:not(:last-child) {
+                                        margin-bottom: 22px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .middle{
+                        >div{
+                            width: 354px;
+                            h4{
+                                width: 324px;
+                                br{
+                                    display: block;
+                                }
+                            }
+                            ul{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

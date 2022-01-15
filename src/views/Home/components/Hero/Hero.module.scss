@@ -1,0 +1,197 @@
+@import '../../../../styles/sass/variables/_variables';
+@import '../../../../styles/sass/fonts/_fonts';
+@import '../../../../styles/sass/breakPoints/_breakPoints';
+@import '../../../../styles/sass/mixins/_mixins';
+
+
+
+@mixin arrows($component:$component){
+    &:before, &:after{
+        @include afterBefore();
+        width: 0;
+        height: 0;
+        border-style: solid;
+        display: none;
+        top:8px;
+    }
+    &:before{
+        left: 0;
+        border-color: transparent $color_gold transparent transparent;
+    }
+    &:after{
+        right: 0;
+        border-color: transparent transparent transparent $color_gold;
+    }
+    @if $component == "subtitle" {
+        &:before, &:after{
+            top:8px;
+        }
+        &:before{
+            border-width: 5px 200px 5px 0;
+        }
+        &:after{
+            border-width: 5px 0 5px 200px;
+        }
+    }@else if $component == "bottom" {
+        &:before, &:after{
+            top:0;
+        }
+        &:before{
+            border-width: 4px 100px 4px 0;
+        }
+        &:after{
+            border-width: 4px 0 4px 100px;
+        }
+    }
+}
+@mixin mobile(){
+    .heroContent{
+        padding:10% 20px 0;
+        .subtitle{
+            margin-bottom: 10px;
+            p{
+                @include font14();
+            }
+        }
+        .stars, .arrowBottom {
+            display: none;
+        }
+        .thirdTitle{
+            p{
+                @include font16();
+            }
+        }
+        .title{
+            margin-bottom: 10px;
+            @include font30();
+        }
+        .button{
+            margin-top:10px;
+        }
+    }
+}
+
+.hero{
+    @include bg("../../../../resources/images/hero.jpg");
+    .heroContent{
+        text-align: center;
+        color:$color_white;
+        position: relative;
+        .stars{
+            margin-bottom: 30px;
+            span{
+                padding: 0 10px;
+                color:$color_gold;
+            }
+        }
+        .subtitle, .thirdTitle{
+            p{
+                font-family: $play_fair;
+            }
+        }
+        .subtitle{
+            position: relative;
+            width: auto;
+            margin: 0 auto 50px;
+            p{
+                @include font18();
+            }
+            @include arrows("subtitle");
+        }
+        .thirdTitle{
+            p{
+                @include font22();
+            }
+        }
+        .title{
+            font-family: $intro_rust;
+            @include font50();
+            margin-bottom: 50px;
+            span{
+                color:$color_brown;
+            }
+        }
+        .arrowBottom{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 230px;
+            margin:30px auto;
+            @include arrows("bottom");
+            &:before, &:after{
+                display: block;
+            }
+            span{
+                width: 10px;
+                height: 10px;
+                background: $color_gold;
+                border-radius: 100%;
+                display: block;
+            }
+        }
+        .button{
+            background: transparent;
+            border: 1px solid $color_white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            outline: none;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: 0.6s;
+            svg{
+                color:$color_brown;
+                margin-top: 6px;
+            }
+            &:hover, &:focus{
+                background: $color_dark;
+                border-color: $color_dark;
+                svg{
+                    color:$color_white;
+                }
+            }
+        }
+    }
+    .coffe{
+        width: 180px;
+        position: absolute;
+        right: 10%;
+        bottom:-40px;
+        z-index: 2;
+        display: none;
+    }
+    &:after{
+        @include afterBefore();
+        background: url("../../../../resources/images/shadow_hero.png") no-repeat center top;
+        display: none;
+        bottom:0;
+        width: 100%;
+        height: 72px;
+        background-size: cover;
+    }
+    @include mediaQuery(xs, landscape, true) { @include mobile();}
+    @include mediaQuery(xs, portrait, true) {@include mobile();}
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px)and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) { @include mobile();}
+    @media only screen and (device-width: 823px) and (device-height: 411px)  and (orientation: landscape) {@include mobile();}
+    @media only screen and (min-device-width: 823px) and (max-device-height: 560px)  and (orientation: landscape) {@include mobile();}
+    @media screen and (min-width: 992px) {
+        .heroContent{
+            .subtitle{
+                width: 900px;
+                &:before, &:after{
+                    display: block;
+                }
+            }
+        }
+        &:after{
+            display: block;
+        }
+        .coffe{
+            display: block;
+        }
+    }
+}

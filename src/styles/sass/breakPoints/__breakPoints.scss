@@ -1,0 +1,97 @@
+/* Map with indexes and key names for breakpoints */
+$BREAKPOINTS_LANDSCAPE_KEYS: (
+  1: xs,
+  2: sm,
+  3: md,
+  4: lg,
+  5: xl
+);
+$BREAKPOINTS_PORTRAIT_KEYS: (
+  1: xs,
+  2: sm,
+  3: md,
+  4: lg
+);
+
+/* Map with breakpoints definition for the application */
+$BREAKPOINTS_LANDSCAPE: (
+  map-get($BREAKPOINTS_LANDSCAPE_KEYS, 1): 300,
+  map-get($BREAKPOINTS_LANDSCAPE_KEYS, 2): 768,
+  map-get($BREAKPOINTS_LANDSCAPE_KEYS, 3): 1024,
+  map-get($BREAKPOINTS_LANDSCAPE_KEYS, 4): 1440,
+  map-get($BREAKPOINTS_LANDSCAPE_KEYS, 5): 1920
+);
+
+$BREAKPOINTS_PORTRAIT: (
+  map-get($BREAKPOINTS_PORTRAIT_KEYS, 1): 300,
+  map-get($BREAKPOINTS_PORTRAIT_KEYS, 2): 768,
+  map-get($BREAKPOINTS_PORTRAIT_KEYS, 3): 1024,
+  map-get($BREAKPOINTS_PORTRAIT_KEYS, 4): 1080
+);
+
+
+/*
+  Mixin to be used when a media query want's to be coded.
+
+  Parameters:
+    @param breakpoint:  a breakpoint key, defined at breakpoints map.
+    @param orientation: a valid orientation value for the media query.
+    @param addMaxLimit: a bolean indicating if media query returned should
+                        have "max" limit considering next brakepoint.
+
+  Returns:
+    A media query for the specified breakpoint and orientation containing
+    the css rules being wrapped inside the mixin invocation.
+
+  Dependencies:
+    $breakpoints    Two map variables containing a relation of keys and values
+                    that define media queries breakpoints names and values.
+                    One map for landscape and one map for portrait.
+*/
+
+@mixin mediaQuery($breakpoint, $orientation, $addMaxLimit) {
+  $Breakpoints: null;
+  $Breakpoints_keys: null;
+
+  @if($orientation == landscape) {
+    $Breakpoints: $BREAKPOINTS_LANDSCAPE;
+    $Breakpoints_keys: $BREAKPOINTS_LANDSCAPE_KEYS;
+  }
+  @else {
+    $Breakpoints: $BREAKPOINTS_PORTRAIT;
+    $Breakpoints_keys: $BREAKPOINTS_PORTRAIT_KEYS;
+  }
+  @if map-has-key($Breakpoints, $breakpoint) {
+    $key: $breakpoint;
+    $min: map-get($Breakpoints, $key);
+
+    @if($addMaxLimit) {
+      $index: index(($Breakpoints), ($key $min));
+      $nextMediaQueryIndex: $index + 1;
+      $nextBreakpointKey: null;
+
+      @if map-has-key($Breakpoints_keys, $nextMediaQueryIndex) {
+        $nextBreakpointKey: map-get($Breakpoints_keys, $nextMediaQueryIndex);
+        $max:  ( map-get($Breakpoints, $nextBreakpointKey) - 1);
+
+        @media screen and (min-width: #{$min}px) and (max-width: #{$max}px) and (orientation: #{$orientation}) {
+          @content;
+        }
+      }
+      @else {
+        @media screen and (min-width: #{$min}px) and (orientation: #{$orientation}) {
+          @content;
+        }
+      }
+    }
+    @else {
+      @media screen and (min-width: #{$min}px) and (orientation: #{$orientation}) {
+        @content;
+      }
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$Breakpoints` map.";
+  }
+}
