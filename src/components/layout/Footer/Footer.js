@@ -61,20 +61,22 @@ export default function Footer() {
       <article>
         <ul>
           <li>
-            <a href="http://jussmor.com/" className={styles.navLink}>
+            <a href="https://www.jobsity.com/" className={styles.navLink} aria-label="Program" target="_blank" rel="noopener noreferrer">
               Program
             </a>
           </li>
           <li>
-            <a href="http://jussmor.com/" className={styles.navLink}>
+            <a href="https://www.jobsity.com/" className={styles.navLink} aria-label="Gallery" target="_blank" rel="noopener noreferrer">
               Gallery
             </a>
           </li>
           <li>
-            <a href="http://jussmor.com/" className={styles.navLink}>Testimonials</a>
+            <a href="https://www.jobsity.com/" className={styles.navLink} aria-label="Testimonials" target="_blank" rel="noopener noreferrer">
+              Testimonials
+            </a>
           </li>
           <li>
-            <a href="http://jussmor.com/" className={styles.navLink}>
+            <a href="https://www.jobsity.com/" className={styles.navLink} aria-label="Contact" target="_blank" rel="noopener noreferrer">
               Contact
             </a>
           </li>
@@ -84,7 +86,7 @@ export default function Footer() {
             <li>
               <div>{phone}</div>
               <div>
-                <a href="tel:+38 000 000 000">+38 000 000 000</a>
+                <a href="tel:+38 000 000 000" aria-label="Phone" target="_blank" rel="noopener noreferrer">+38 000 000 000</a>
               </div>
             </li>
             <li>
@@ -96,7 +98,7 @@ export default function Footer() {
             <li>
               <div>{mail}</div>
               <div>
-                <a href="mailto:hello@.com">hello@.com</a>
+                <a href="mailto:hello@.com" aria-label="Mail" target="_blank" rel="noopener noreferrer">hello@.com</a>
               </div>
             </li>
           </ul>
@@ -106,8 +108,8 @@ export default function Footer() {
         <li>© Copyright 2022. All Rights Reserved.</li>
         <li>
           site template by{" "}
-          <a href="https://jussmor.com/"
-            rel="noopener"
+          <a href="https://jussmor.com/" target="_blank"
+            rel="noopener noreferrer"
           >
             Jussmor
           </a>

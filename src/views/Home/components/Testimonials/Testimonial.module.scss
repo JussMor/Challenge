@@ -4,6 +4,11 @@
 
 .testimonials{
     padding:0 20px 40px;
+    .header {
+        h2{
+            color: $color_dark ;
+        }
+    }
     .item{
         margin-top:40px;
         text-align: center;

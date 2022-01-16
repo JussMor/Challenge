@@ -27,7 +27,7 @@ export default function Hero(props) {
           <div className={styles.arrowBottom}>
             <span></span>
           </div>
-          <a href="ww">
+          <a href="https://www.jobsity.com/" className={styles.button} aria-label="Arrow" target="_blank" rel="noopener noreferrer">
             {chevronDown}
           </a>
         </div>

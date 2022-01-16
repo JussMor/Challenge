@@ -16,8 +16,8 @@ export default function NavBar(props) {
         <Navbar sticky="top" id="navbar" className={`navbar-expand-lg ${styles.navBar}`} collapseOnSelect={true} expand="lg">
             <Container className={styles.navBarContainer}>
                 <Navbar.Brand className={styles.navBarBrand}>
-                    <a href="hola" className={styles.linkBrand}>
-                        <img src={props.logo} alt="Coffe Make" className={`logo ${styles.logo}`}/>
+                    <a href="https://www.jobsity.com/" className={styles.linkBrand} aria-label="Logo" target="_blank" rel="noopener noreferrer">
+                        <img src={props.logo} alt="Coffe Make" className={`logo ${styles.logo}`} />
                         <img src={props.logo_sticky} alt="Coffe Make" className={`logo-sticky ${styles.logo_sticky}`}/>
                     </a>
                 </Navbar.Brand>
@@ -31,32 +31,34 @@ export default function NavBar(props) {
                     </div>
                     <Nav className={`ml-auto ${styles.nav}`}>
                         <Nav.Item className={styles.navItem}>
-                            <a href="hola"  className={styles.navLink}>
+                            <a href="https://www.jobsity.com/"  className={styles.navLink} aria-label="Program" target="_blank" rel="noopener noreferrer">
                                 Program
                             </a>
                         </Nav.Item>
                         <Nav.Item className={styles.navItem}>
-                            <a href="hola" className={styles.navLink}>
+                            <a href="https://www.jobsity.com/" className={styles.navLink} aria-label="Gallery" target="_blank" rel="noopener noreferrer">
                                 Gallery
                             </a>
                         </Nav.Item>
                         <Nav.Item className={styles.navItem}>
-                            <a href="hola" className={styles.navLink}>
+                            <a href="https://www.jobsity.com/" className={styles.navLink} aria-label="Reviews" target="_blank" rel="noopener noreferrer">
                                 Reviews
                             </a>
                         </Nav.Item>
                         <Nav.Item className={styles.navItem}>
-                            <a  href="hola" className={styles.navLink}>
+                            <a  href="https://www.jobsity.com/" className={styles.navLink} aria-label="Partners" target="_blank" rel="noopener noreferrer">
                                 Partners
                             </a>
                         </Nav.Item>
                         <Nav.Item className={styles.navItem}>
-                            <a href="hola" className={styles.navLink}>
+                            <a href="https://www.jobsity.com/" className={styles.navLink} aria-label="Contact" target="_blank" rel="noopener noreferrer">
                                 Contact
                             </a>
                         </Nav.Item>
                         <div className={styles.contentPhone}>
-                            <a href="tel:+38 (099) 66-11-730" className={styles.phone}>+38 (099) 66-11-730</a>
+                            <a href="tel:+38 (099) 66-11-730" className={styles.phone} aria-label="Phone" target="_blank" rel="noopener noreferrer">
+                                +38 (099) 66-11-730
+                            </a>
                         </div>
                     </Nav> 
                 </Navbar.Collapse>
@@ -67,7 +69,7 @@ export default function NavBar(props) {
 }
 
 
-Navbar.defaultProps = {
+NavBar.defaultProps = {
     logo: require("../../../resources/images/logo.png"),
     logo_sticky: require("../../../resources/images/logo_sticky.png")
 }
