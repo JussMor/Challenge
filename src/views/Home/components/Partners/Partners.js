@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Partners.module.scss";
 import HeaderSections from "../../../../components/common/HeaderSection/HeaderSection";
+import  OwlCarousel  from "react-owl-carousel";
 export default function Partners(props) {
   const icon = (
     <img src={props.icon} alt="Coffe Make" className={styles.icon} />
@@ -22,7 +23,7 @@ export default function Partners(props) {
             title="our partners"
             subtitle=""
           />
-          {/* <OwlCarousel
+          <OwlCarousel
             className={`partners-slides owl-theme ${styles.partnerSlides}`}
             loop={true}
             autoplay={false}
@@ -52,7 +53,7 @@ export default function Partners(props) {
             }}
           >
             {partnersLogos}
-          </OwlCarousel> */}
+          </OwlCarousel>
         </div>
       </section>
     </>

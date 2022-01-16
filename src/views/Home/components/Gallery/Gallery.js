@@ -1,24 +1,18 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import styles from "./Gallery.module.scss";
 import HeaderSections from "../../../../components/common/HeaderSection/HeaderSection";
 // import Slider from "react-slick";
 import OwlCarousel from "react-owl-carousel";
-import '../../../../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css'
+
 
 export default function Gallery(props) {
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  // };
+
   const galleryImages = props.galleryImages.map((item, index) => (
     <div className={`${item.class} ${styles.picture}`} key={index}>
       <img src={item.image} alt="client" />
     </div>
   ));
-  console.log(galleryImages);
+
   const icon = (
     <img src={props.icon} alt="Coffe Make" className={styles.icon} />
   );
@@ -65,11 +59,6 @@ export default function Gallery(props) {
                     </div>
                 </section>
 
-      {/*     //tienes que agrear flex y ver como posicionas y customizas  para que no haga overflow */}
-      {/*       
-      <Slider {...settings} >
-            {galleryImages}
-      </Slider> */}
     </>
   );
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from "./Testimonial.module.scss"
+import OwlCarousel from "react-owl-carousel";
+import HeaderSections from '../../../../components/common/HeaderSection/HeaderSection'
 
 export default function Testimonial(props) {
 
@@ -16,9 +18,30 @@ export default function Testimonial(props) {
     </div>
     ) )
     return (
-        <div>
-            {testimonial}
-        </div>
+        <>
+                 <section id="reviews" className={styles.testimonials}>
+                    <div className={styles.content}>
+                        <HeaderSections classes={styles.header} title="testimonials" subtitle="We have enough patience to teach you the art of coffee" />
+                        <OwlCarousel 
+                            className="testimonial-slides owl-theme"
+                            loop={true}
+                            autoplay={true}
+                            nav={true}
+                            mouseDrag={true}
+                            autoplayHoverPause={true}
+                            responsiveClass={true}
+                            dots={true}
+                            items={1}
+                            navText={[
+                                "<i class='icon icon-left'></i>",
+                                "<i class='icon icon-right'></i>"
+                            ]}
+                        >
+                            {testimonial}
+                        </OwlCarousel>
+                    </div>
+                </section>
+        </>
     )
 }
 

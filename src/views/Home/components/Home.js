@@ -19,11 +19,11 @@ export default function Home() {
 
       <Programs/> {/*Listo*/}
 
-      <Gallery /> 
+      <Gallery /> {/*Listo*/}
 
-      {/* <Testimonial/> */} {/* */}
+      <Testimonial/> {/* */}
 
-      <Partners/> {/* */}
+      <Partners/> {/* Listo*/}
 
       <Contact/> {/* */}
       

@@ -1,0 +1,57 @@
+@import '../../../../styles/sass/variables/_variables';
+@import '../../../../styles/sass/fonts/_fonts';
+@import '../../../../styles/sass/mixins/_mixins';
+
+.testimonials{
+    padding:0 20px 40px;
+    .item{
+        margin-top:40px;
+        text-align: center;
+        .picture{
+            position: relative;
+            width: 170px;
+            margin:0 auto;
+            .img{
+                height: 170px;
+            }
+            .socialicon{
+                background: transparent;
+                position: absolute;
+                width: 50px !important;
+                height: 50px;
+                top:18px;
+                right: -16px;
+            }
+        }
+        
+        h4{
+            color:$color_dark;
+            margin:20px 0;
+            font-family: $intro_regular;
+            @include font18();
+        }
+        p{
+            color:$color_blue;
+            font-family: $minion_pro_regular;
+            @include font16();
+            line-height: 35px;
+            padding: 0 30px;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        padding:0 20px 80px;
+        .item{
+            margin-top:80px;
+            p{
+                width: 856px;
+                margin:0 auto;
+            }
+        }
+    }
+    @media screen and (min-width: 1240px) {
+        .content{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+}

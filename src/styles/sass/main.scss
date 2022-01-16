@@ -1,3 +1,4 @@
+@import 'owl.carousel/dist/assets/owl.carousel.css';
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "./mixins/_mixins";
 @import "./fonts/_fonts";
@@ -88,6 +89,7 @@ body {
     line-height: 0.1;
     margin-top: 40px !important;
     .owl-dot {
+
       span {
         width: 15px !important;
         height: 15px !important;
@@ -150,6 +152,7 @@ body {
     }
     .owl-nav {
       margin-top: 40px;
+      text-align: center;
       .owl-prev,
       .owl-next {
         position: relative;
