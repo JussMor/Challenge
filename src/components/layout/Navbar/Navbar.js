@@ -60,7 +60,7 @@ export default function NavBar(props) {
                                 +38 (099) 66-11-730
                             </a>
                         </div>
-                    </Nav> 
+                    </Nav>  
                 </Navbar.Collapse>
             </Container>
         </Navbar> 
