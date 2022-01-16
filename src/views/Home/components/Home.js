@@ -19,7 +19,7 @@ export default function Home() {
 
       <Programs/> {/*Listo*/}
 
-      {/* <Gallery /> */} {/* */}
+      <Gallery /> 
 
       {/* <Testimonial/> */} {/* */}
 
