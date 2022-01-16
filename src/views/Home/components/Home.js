@@ -13,21 +13,21 @@ export default function Home() {
   return (
     <>
     
-      <NavBar/>
+      <NavBar/> {/*Solo Falta el logo  */}
 
-      <Hero/>
+      <Hero/> {/* Listo*/}
 
-      <Programs/>
+      <Programs/> {/*Listo*/}
 
-      {/* <Gallery /> */}
+      {/* <Gallery /> */} {/* */}
 
-      {/* <Testimonial/> */}
+      {/* <Testimonial/> */} {/* */}
 
-      <Partners/>
+      <Partners/> {/* */}
 
-      <Contact/>
+      <Contact/> {/* */}
       
-      <Footer />
+      <Footer /> {/*Listo */}
     </>
   );
 }
