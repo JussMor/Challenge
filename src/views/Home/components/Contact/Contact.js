@@ -85,5 +85,5 @@ export default function Contact(props) {
 }
 
 Contact.defaultProps = {
-  img: require("../../../../resources/images/coffe_4.png"),
+  img: require("../../../../resources/images/coffe_4.webp"),
 };

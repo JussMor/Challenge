@@ -1,5 +1,5 @@
-@import '~owl.carousel/dist/assets/owl.carousel.css';
-@import '~owl.carousel/dist/assets/owl.theme.default.css';
+@import "~owl.carousel/dist/assets/owl.carousel.css";
+@import "~owl.carousel/dist/assets/owl.theme.default.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "./mixins/_mixins";
 @import "./fonts/_fonts";
@@ -23,11 +23,10 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-  background: url("../../resources/images/bg_intern.jpg") repeat 0 0;
+  background: url("../../resources/images/bg_intern.webp") repeat 0 0;
   background-size: cover;
   height: 100vh;
   a {
-    
     display: inline-block;
     outline: none;
     text-decoration: none;
@@ -84,16 +83,13 @@ body {
   }
 }
 
-
 .owl-theme {
-
   touch-action: none;
   .owl-dots {
     line-height: 0.1;
     margin-top: 40px !important;
 
     .owl-dot {
-
       span {
         width: 15px !important;
         height: 15px !important;
@@ -118,7 +114,7 @@ body {
               height: 400px;
               width: 100%;
               -o-object-fit: cover;
-                 object-fit: cover;
+              object-fit: cover;
             }
           }
           @media screen and (min-width: 1200px) {
@@ -176,7 +172,7 @@ body {
         }
         &:after {
           @include afterBefore();
-          background: url("../../resources/images/arrow.png") no-repeat 0 0;
+          background: url("../../resources/images/arrow.webp") no-repeat 0 0;
           width: 80px;
           top: 15px;
           height: 16px;
@@ -282,36 +278,36 @@ body {
   }
 }
 
-#uncontrolled-tab-tab-basic{
-    padding-top: 20px;
-    padding-bottom: 20px;
+#uncontrolled-tab-tab-basic {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-#uncontrolled-tab-tab-premium{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#uncontrolled-tab-tab-platinum{
-    padding-top: 20px;
-    padding-bottom: 20px;
+#uncontrolled-tab-tab-premium {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+#uncontrolled-tab-tab-platinum {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
-.nav-link:focus, .nav-link:hover {
-    color: $color_brown;
+.nav-link:focus,
+.nav-link:hover {
+  color: $color_brown;
 }
 
 .nav-tabs .nav-link {
-    margin-bottom: -1px;
-    background: 0 0;
-    border: 0px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+  margin-bottom: -1px;
+  background: 0 0;
+  border: 0px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .nav-link {
-    font-family: $intro_regular;
-    color:$color_gray;
+  font-family: $intro_regular;
+  color: $color_gray;
   &.active {
     font-family: $intro_regular;
     color: $color_dark;
@@ -324,11 +320,12 @@ body {
   }
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #495057;
-    background-color: rgba(255, 255, 255, 0);
-    border-color: #dee2e6 #dee2e6 #fff;
-    border-bottom: 2px solid black;
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #dee2e6 #dee2e6 #fff;
+  border-bottom: 2px solid black;
 }
 
 .navbar-wrapper {

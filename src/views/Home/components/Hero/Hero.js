@@ -27,7 +27,13 @@ export default function Hero(props) {
           <div className={styles.arrowBottom}>
             <span></span>
           </div>
-          <a href="https://www.jobsity.com/" className={styles.button} aria-label="Arrow" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.jobsity.com/"
+            className={styles.button}
+            aria-label="Arrow"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {chevronDown}
           </a>
         </div>
@@ -38,5 +44,5 @@ export default function Hero(props) {
 }
 
 Hero.defaultProps = {
-  coffe: require("../../../../resources/images/coffe.png"),
+  coffe: require("../../../../resources/images/coffe.webp"),
 };

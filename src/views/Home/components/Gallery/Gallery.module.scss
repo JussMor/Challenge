@@ -1,87 +1,90 @@
-@import '../../../../styles/sass/variables/_variables';
-@import '../../../../styles/sass/fonts/_fonts';
-@import '../../../../styles/sass/mixins/_mixins';
+@import "../../../../styles/sass/variables/_variables";
+@import "../../../../styles/sass/fonts/_fonts";
+@import "../../../../styles/sass/mixins/_mixins";
 
-.gallery{
-    position: relative;
-    background: url("../../../../resources/images/bg_gallery.jpg") no-repeat 0 0;
-    background-size: cover;
-    height: 800px;
-    margin-bottom: 40px;
-    .coffe1, .coffe2{
-        position: absolute;
-        display: none;
-        filter: blur(5px);
-    }
-    .coffe1{
-        top: -45px;
-        left: 30px;
-    }
-    .coffe2{
-        bottom: -150px;
-        right: 0;
-    }
-    .galleryContainer{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    .header{
-        span{
-            &:first-child{
-                .icon{
-                    @include rotate(180);
-                }
-            }
+.gallery {
+  position: relative;
+  background: url("../../../../resources/images/bg_gallery.webp") no-repeat 0 0;
+  background-size: cover;
+  height: 800px;
+  margin-bottom: 40px;
+  .coffe1,
+  .coffe2 {
+    position: absolute;
+    display: none;
+    filter: blur(5px);
+  }
+  .coffe1 {
+    top: -45px;
+    left: 30px;
+  }
+  .coffe2 {
+    bottom: -150px;
+    right: 0;
+  }
+  .galleryContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .header {
+    span {
+      &:first-child {
+        .icon {
+          @include rotate(180);
         }
-        h2, p{
-            color:$color_white;
-        }
-        p{
-            width: auto;
-            padding: 0 20px;
-        }
+      }
     }
-    .galleryCarousel{
-        margin: 40px 0 0;
+    h2,
+    p {
+      color: $color_white;
     }
-    .number{
-        font-family: $minion_pro_regular;
-        @include font20();
-        position: absolute;
-        bottom:103px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        color: $color_white;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        width: 100px;
-        justify-content: center;
-        span{
-            color:$color_brown;
-            padding: 0 4px;
-        }
+    p {
+      width: auto;
+      padding: 0 20px;
     }
-    @media screen and (min-width: 992px) {
-        height: 1175px;
-        margin-bottom: 80px;
-        .number{
-            bottom: 286px;
-            width: 180px;
-        }
-        .coffe1, .coffe2{
-            display: block;
-        }
-        header{
-            p{
-                width: 410px;
-                margin: auto;
-                padding:0;
-            }
-        }
+  }
+  .galleryCarousel {
+    margin: 40px 0 0;
+  }
+  .number {
+    font-family: $minion_pro_regular;
+    @include font20();
+    position: absolute;
+    bottom: 103px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: $color_white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+    span {
+      color: $color_brown;
+      padding: 0 4px;
     }
+  }
+  @media screen and (min-width: 992px) {
+    height: 1175px;
+    margin-bottom: 80px;
+    .number {
+      bottom: 286px;
+      width: 180px;
+    }
+    .coffe1,
+    .coffe2 {
+      display: block;
+    }
+    header {
+      p {
+        width: 410px;
+        margin: auto;
+        padding: 0;
+      }
+    }
+  }
 }

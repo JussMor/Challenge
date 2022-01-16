@@ -1,180 +1,187 @@
-@import '../../../../styles/sass/variables/_variables';
-@import '../../../../styles/sass/fonts/_fonts';
-@import '../../../../styles/sass/mixins/_mixins';
+@import "../../../../styles/sass/variables/_variables";
+@import "../../../../styles/sass/fonts/_fonts";
+@import "../../../../styles/sass/mixins/_mixins";
 
+.contact {
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  &:after,
+  &:before {
+    @include afterBefore();
+    display: none;
+  }
+  &:after {
+    background: url("../../../../resources/images/coffe_5.webp") no-repeat right
+      bottom;
+    width: 492px;
+    height: 372px;
+    right: -160px;
+    bottom: 0;
+    background-size: contain;
+    display: block;
+  }
+  &:before {
+    background: url("../../../../resources/images/coffe_6.webp") no-repeat 0 0;
+    width: 600px;
+    height: 100%;
+    left: -100px;
+    top: -75px;
+    background-size: contain;
+  }
+  .header {
+    > div {
+      text-align: left;
+      justify-content: flex-start;
+      border-bottom: 1px solid $color_dark;
+      h2 {
+        color: $color_dark;
+        padding: 0;
+      }
+    }
+    p {
+      text-align: left;
+    }
+  }
+  .block {
+    form {
+      margin: 20px 0;
+      position: relative;
+      > div {
+        width: 100%;
+        margin: 0;
+        &:first-child {
+          margin-bottom: 40px;
+        }
+        > div {
+          @include font14();
+          font-family: $minion_pro_regular;
+          font-style: italic;
+        }
+        &:last-child {
+          margin: 40px 0;
+        }
+      }
+      input {
+        color: $color_dark;
+        background: transparent;
+        width: 100%;
+        opacity: 1;
+        @include font14();
+        font-family: $intro_regular;
+        border: none;
+        border-bottom: 1px solid $color_dark;
+        padding: 10px 0;
+        border-radius: 0;
+        height: auto;
+        outline: none;
+        line-height: normal;
+        &:focus,
+        &:active,
+        &:hover {
+          box-shadow: none;
+        }
+        &::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: $color_dark;
+          opacity: 1; /* Firefox */
+        }
 
+        &:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: $color_dark;
+        }
 
-.contact{
-    padding:40px 20px;
-    position: relative;
-    overflow: hidden;
-    &:after, &:before{
-        @include afterBefore();
-        display: none;
-    }
-    &:after{
-        background: url("../../../../resources/images/coffe_5.png") no-repeat right bottom;
-        width: 492px;
-        height: 372px;
-        right: -160px;
-        bottom: 0;
-        background-size: contain;
-        display: block;
-    }
-    &:before{
-        background: url("../../../../resources/images/coffe_6.png") no-repeat 0 0;
-        width: 600px;
-        height: 100%;
-        left: -100px;
-        top: -75px;
-        background-size: contain;
-    }
-    .header{ 
-        >div{
-            text-align: left;
-            justify-content: flex-start;
-            border-bottom:1px solid $color_dark;
-            h2{
-                color: $color_dark;
-                padding: 0;
-            }
+        &::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: $color_dark;
         }
-        p{
-            text-align: left;
+      }
+      .button {
+        position: relative;
+        width: 95%;
+        display: flex;
+        background: transparent;
+        @include font18();
+        font-family: $intro_regular;
+        border: 1px solid $color_dark;
+        border-radius: 0;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        transition: 0.6s;
+        outline: none;
+        &:hover,
+        &:focus {
+          background: transparent;
+          border-color: $color_brown;
+          color: $color_brown;
         }
+        &:after {
+          @include afterBefore();
+          @include rotate(180);
+          background: url("../../../../resources/images/arrow_dark.webp")
+            no-repeat 0 0;
+          width: 112px;
+          top: 15px;
+          height: 27px;
+          background-size: contain;
+          right: -40px;
+        }
+      }
     }
-    .block{
-        form{
-            margin: 20px 0;
-            position: relative;
-            >div{
-                width: 100%;
-                margin: 0;
-                &:first-child{
-                    margin-bottom: 40px;
-                }
-                >div{
-                    @include font14();
-                    font-family: $minion_pro_regular;
-                    font-style: italic;
-                }
-                &:last-child{
-                    margin: 40px 0;   
-                }
-            }
-            input{
-                color: $color_dark;
-                background: transparent;
-                width: 100%;
-                opacity: 1;
-                @include font14();
-                font-family: $intro_regular;
-                border:none;
-                border-bottom:1px solid $color_dark;
-                padding: 10px 0;
-                border-radius: 0;
-                height: auto;
-                outline: none;
-                line-height: normal;
-                &:focus,&:active, &:hover{
-                    box-shadow: none;
-                }
-                &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                    color: $color_dark;
-                    opacity: 1; /* Firefox */
-                }
-                
-                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-                    color: $color_dark;
-                }
-                
-                &::-ms-input-placeholder { /* Microsoft Edge */
-                    color: $color_dark;
-                }
-            }
-            .button{
-                position: relative;
-                width: 95%;
-                display: flex;
-                background: transparent;
-                @include font18();
-                font-family: $intro_regular;
-                border:1px solid $color_dark;
-                border-radius: 0;
-                height: 60px;
-                align-items: center;
-                justify-content: center;
-                padding:0;
-                transition: 0.6s;
-                outline: none;
-                &:hover, &:focus{
-                    background: transparent;
-                    border-color: $color_brown;
-                    color:$color_brown;
-                }
-                &:after{
-                    @include afterBefore();
-                    @include rotate(180);
-                    background: url("../../../../resources/images/arrow_dark.png") no-repeat 0 0;
-                    width: 112px;
-                    top: 15px;
-                    height: 27px;
-                    background-size: contain;
-                    right: -40px;
-                }
-            }
-        }
-        .contactMsg{
-            @include font20();
-            font-family: $minion_pro_regular;
-            font-style: italic;
-            color: $color_green;
-        }
+    .contactMsg {
+      @include font20();
+      font-family: $minion_pro_regular;
+      font-style: italic;
+      color: $color_green;
     }
-    .coffe{
-        width: 358px;
-        max-width: none;
-        position: absolute;
-        display: none;
+  }
+  .coffe {
+    width: 358px;
+    max-width: none;
+    position: absolute;
+    display: none;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 140px 20px 0;
+    &:before {
+      display: block;
     }
-    @media screen and (min-width: 992px) {
-        padding:140px 20px 0;
-        &:before{
-            display: block;
+    .block {
+      margin-left: 35%;
+      form {
+        margin: 150px 0 260px 0;
+        > div {
+          width: 50%;
+          &:first-child {
+            margin-bottom: 50px;
+          }
+          &:last-child {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+          }
         }
-        .block{
-            margin-left: 35%;
-            form{
-                margin: 150px 0 260px 0;
-                >div{
-                    width: 50%;
-                    &:first-child{
-                        margin-bottom: 50px;
-                    }
-                    &:last-child{
-                        position: absolute;
-                        right: 0;
-                        bottom: 0;
-                        margin: 0;
-                    }
-                }
-                .button{
-                    width: 60%;
-                    margin: 0 auto;
-                    &:after{
-                        right: -80px;
-                    }
-                }
-            }
+        .button {
+          width: 60%;
+          margin: 0 auto;
+          &:after {
+            right: -80px;
+          }
         }
-        .coffe{
-            display: block;
-        }
+      }
     }
-    @media screen and (min-width: 1240px) {
-        .content{
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .coffe {
+      display: block;
     }
+  }
+  @media screen and (min-width: 1240px) {
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
 }

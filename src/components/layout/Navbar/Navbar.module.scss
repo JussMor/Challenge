@@ -1,268 +1,269 @@
-@import '../../../styles/sass/variables/_variables';
-@import '../../../styles/sass/mixins/_mixins';
-@import '../../../styles/sass/fonts/_fonts';
-
+@import "../../../styles/sass/variables/_variables";
+@import "../../../styles/sass/mixins/_mixins";
+@import "../../../styles/sass/fonts/_fonts";
 
 .navBarWrapper {
+  width: 100%;
+  .navBar {
     width: 100%;
-    .navBar{
-        width: 100%;
-        height: auto;
+    height: auto;
+    left: 0;
+    background: transparent;
+    padding: 0;
+    position: absolute;
+    .navBarContainer {
+      max-width: none;
+      padding: 0 0 0 20px;
+      height: 60px;
+      align-items: self-end;
+      &:after {
+        @include afterBefore();
+        height: 1px;
+        width: 35px;
+        top: 60px;
         left: 0;
-        background: transparent;
-        padding:0;
+        background: $color_white;
+      }
+      .navBarBrand {
+        display: block;
+        margin: 30px 30px -50px 40px;
+        padding: 0;
+        .linkBrand {
+          display: block;
+          .logo {
+            width: 180px;
+          }
+          .logo_sticky {
+            display: none;
+          }
+        }
+      }
+      .closeButton {
+        display: none;
+        width: 40px;
+        height: 40px;
         position: absolute;
-        .navBarContainer{
-            max-width: none;
-            padding:0 0 0 20px;
-            height: 60px;
-            align-items: self-end;
-            &:after{
+        right: 20px;
+        top: 15px;
+        button {
+          outline: 0 !important;
+          border-radius: 0;
+          justify-content: flex-end;
+          padding: 0;
+          border: none;
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          span {
+            display: block;
+            background-image: url("../../../resources/images/close_button.webp");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+          }
+        }
+      }
+      .toggleButton {
+        display: none;
+        flex-grow: 1;
+        height: 100%;
+        padding: 0 50px 0 0;
+        justify-content: flex-end;
+        border-bottom: 1px solid $color_white;
+        button {
+          outline: 0 !important;
+          border-radius: 0;
+          justify-content: flex-end;
+          padding: 0;
+          border: none;
+          span {
+            background-image: url("../../../resources/images/menu.webp");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+      .navBarCollapse {
+        flex-grow: 1;
+        flex-basis: unset;
+        height: 60px;
+        border-bottom: 1px solid $color_white;
+        justify-content: flex-end;
+        padding-right: 20px;
+        .nav {
+          font-family: $intro_rust;
+          height: 100%;
+          .navItem {
+            @include font12();
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+            cursor: pointer;
+            height: 100%;
+            position: relative;
+            &:before {
+              @include afterBefore();
+              height: 5px;
+              width: 5px;
+              border-radius: 100%;
+              top: 28px;
+              right: -20px;
+              background: $color_white;
+            }
+            &:after {
+              @include afterBefore();
+              height: 4px;
+              width: 0;
+              bottom: -2px;
+              left: 0;
+              background: $color_brown;
+              overflow: hidden;
+              visibility: hidden;
+              transition: 0.4s;
+            }
+            &:nth-child(5) {
+              margin: 0;
+              &:before {
+                display: none;
+              }
+            }
+            a {
+              display: block;
+              color: $color_white;
+              &:after {
                 @include afterBefore();
-                height: 1px;
-                width: 35px;
-                top:60px;
+                height: 4px;
+                width: 0;
+                bottom: -2px;
                 left: 0;
-                background: $color_white;
+                background: $color_brown;
+                overflow: hidden;
+                visibility: hidden;
+                transition: 0.4s;
+              }
+              &:hover,
+              &.active {
+                color: $color_brown;
+              }
             }
-            .navBarBrand{
-                display: block;
-                margin: 30px 30px -50px 40px;
-                padding:0;
-                .linkBrand{
-                    display: block;
-                    .logo{
-                        width: 180px;
-                    }
-                    .logo_sticky{
-                        display: none;
-                    }
-                }
+            &:hover,
+            &.active {
+              &:after {
+                width: 100%;
+                overflow: visible;
+                visibility: visible;
+              }
+              a {
+                color: $color_brown;
+              }
             }
-            .closeButton{
+          }
+          .contentPhone {
+            align-items: center;
+            display: flex;
+            .phone {
+              margin-left: 30px;
+              @include font18();
+              color: $color_white;
+              &:hover {
+                color: $color_brown;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .navBar {
+      .navBarContainer {
+        padding: 0 20px;
+        border-bottom: 1px solid $color_white;
+        .toggleButton {
+          display: flex;
+          border: 0;
+          padding: 0;
+        }
+        .closeButton {
+          display: flex;
+        }
+        .navBarBrand {
+          margin: 10px 0 8px 0;
+          .linkBrand {
+            display: block;
+            .logo {
+              display: none;
+            }
+            .logo_sticky {
+              height: 40px;
+              display: block;
+            }
+          }
+        }
+        .navBarCollapse {
+          position: fixed;
+          top: 0;
+          flex-flow: column;
+          height: auto;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: $color_dark;
+          padding: 0;
+          z-index: 1;
+          .nav {
+            align-items: center;
+            justify-content: center;
+            .navItem {
+              height: 60px;
+              margin: 0;
+              width: auto;
+              text-align: center;
+              justify-content: center;
+              &:before {
                 display: none;
-                width: 40px;
-                height: 40px;
-                position: absolute;
-                right: 20px;
-                top:15px;
-                button{
-                    outline: 0 !important;
-                    border-radius: 0;
-                    justify-content: flex-end;
-                    padding: 0;
-                    border: none;
-                    width: 100%;
-                    height: 100%;
-                    background: transparent;
-                    span{
-                        display: block;
-                        background-image: url("../../../resources/images/close_button.png");
-                        background-position: 0 0;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                        background-size: cover;
-                    }
-                }
+              }
             }
-            .toggleButton{
-                display: none;
-                flex-grow: 1;
-                height: 100%;
-                padding:0 50px 0 0;
-                justify-content: flex-end;
-                border-bottom: 1px solid $color_white;
-                button{
-                    outline: 0 !important;
-                    border-radius: 0;
-                    justify-content: flex-end;
-                    padding: 0;
-                    border: none;
-                    span{
-                        background-image: url("../../../resources/images/menu.png");
-                        background-position: 0 0;
-                        background-repeat: no-repeat;
-                        width: 40px;
-                        height: 40px;
-                    }
-                }
+            .contentPhone {
+              height: 60px;
+              .phone {
+                margin-left: 0;
+                @include font28();
+              }
             }
-            .navBarCollapse{
-                flex-grow: 1;
-                flex-basis: unset;
-                height: 60px;
-                border-bottom: 1px solid $color_white;
-                justify-content: flex-end;
-                padding-right: 20px;
-                .nav{
-                    font-family: $intro_rust;
-                    height: 100%;
-                    .navItem{
-                        @include font12();
-                        display: flex;
-                        align-items: center;
-                        margin-right: 40px;
-                        cursor: pointer;
-                        height: 100%;
-                        position: relative;
-                        &:before{
-                            @include afterBefore();
-                            height: 5px;
-                            width: 5px;
-                            border-radius: 100%;
-                            top:28px;
-                            right: -20px;
-                            background: $color_white;
-                        }
-                        &:after{
-                            @include afterBefore();
-                            height: 4px;
-                            width: 0;
-                            bottom:-2px;
-                            left: 0;
-                            background: $color_brown;
-                            overflow: hidden;
-                            visibility: hidden;
-                            transition: 0.4s;
-                        }
-                        &:nth-child(5){
-                            margin: 0;
-                            &:before{
-                                display: none;
-                            }
-                        }
-                        a{
-                            display: block;
-                            color:$color_white;
-                            &:after{
-                                @include afterBefore();
-                                height: 4px;
-                                width: 0;
-                                bottom:-2px;
-                                left: 0;
-                                background: $color_brown;
-                                overflow: hidden;
-                                visibility: hidden;
-                                transition: 0.4s;
-                            }
-                            &:hover, &.active{
-                                color: $color_brown;
-                            }
-                        }
-                        &:hover, &.active {
-                            &:after{
-                                width: 100%;
-                                overflow: visible;
-                                visibility: visible;
-                            }
-                            a{
-                                color: $color_brown;
-                            }
-                        }
-                    }
-                    .contentPhone{
-                        align-items: center;
-                        display: flex;
-                        .phone{
-                            margin-left: 30px;
-                            @include font18();
-                            color:$color_white;
-                            &:hover {
-                                color: $color_brown;
-                            }
-                        }
-                    }
-                }
-            }
+          }
         }
-    }
-    @media screen and (max-width: 991px) {
-        .navBar{
-            .navBarContainer{
-                padding:0 20px;
-                border-bottom: 1px solid $color_white;;
-                .toggleButton{
-                    display: flex;
-                    border:0;
-                    padding: 0;
-                }
-                .closeButton{
-                    display: flex;
-                }
-                .navBarBrand{
-                    margin: 10px 0 8px 0;
-                    .linkBrand{
-                        display: block;
-                        .logo{
-                            display: none;
-                        }
-                        .logo_sticky{
-                            height: 40px;
-                            display: block;
-                        }
-                    }
-                }
-                .navBarCollapse{
-                    position: fixed;
-                    top: 0;
-                    flex-flow: column;
-                    height: auto;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background: $color_dark;
-                    padding: 0;
-                    z-index: 1;
-                    .nav{
-                        align-items: center;
-                        justify-content: center;
-                        .navItem{
-                            height: 60px;
-                            margin: 0;
-                            width: auto;
-                            text-align: center;
-                            justify-content: center;
-                            &:before{
-                                display: none;
-                            }
-                        }
-                        .contentPhone{
-                            height: 60px;
-                            .phone{
-                                margin-left: 0;
-                                @include font28();
-                            }
-                        }
-                    }
-                }
-                &:after{
-                    display: none;
-                }
-            }
+        &:after {
+          display: none;
         }
+      }
     }
-    @media screen and (min-width: 1240px) {
-        .navBar{
-            .navBarContainer{
-                .navBarCollapse{
-                    padding-right: 50px;
-                    .nav{
-                        .navItem{
-                            margin-right: 60px;
-                            &:before{
-                                right: -30px;
-                            }
-                        }
-                        .contentPhone{
-                            .phone{
-                                margin-left: 60px;
-                                @include font28();
-                            }
-                        }
-                    }
-                }
+  }
+  @media screen and (min-width: 1240px) {
+    .navBar {
+      .navBarContainer {
+        .navBarCollapse {
+          padding-right: 50px;
+          .nav {
+            .navItem {
+              margin-right: 60px;
+              &:before {
+                right: -30px;
+              }
             }
+            .contentPhone {
+              .phone {
+                margin-left: 60px;
+                @include font28();
+              }
+            }
+          }
         }
+      }
     }
+  }
 }

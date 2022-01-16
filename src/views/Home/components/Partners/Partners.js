@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Partners.module.scss";
 import HeaderSections from "../../../../components/common/HeaderSection/HeaderSection";
-import  OwlCarousel  from "react-owl-carousel";
+import OwlCarousel from "react-owl-carousel";
 export default function Partners(props) {
   const icon = (
     <img src={props.icon} alt="Coffe Make" className={styles.icon} />
@@ -61,43 +61,43 @@ export default function Partners(props) {
 }
 
 Partners.defaultProps = {
-  icon: require("../../../../resources/images/icon_title_black.png"),
+  icon: require("../../../../resources/images/icon_title_black.webp"),
   partnersLogos: [
     {
-      img: require("../../../../resources/images/partner_1.png"),
+      img: require("../../../../resources/images/partner_1.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_2.png"),
+      img: require("../../../../resources/images/partner_2.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_3.png"),
+      img: require("../../../../resources/images/partner_3.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_4.png"),
+      img: require("../../../../resources/images/partner_4.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_5.png"),
+      img: require("../../../../resources/images/partner_5.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_6.png"),
+      img: require("../../../../resources/images/partner_6.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_1.png"),
+      img: require("../../../../resources/images/partner_1.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_2.png"),
+      img: require("../../../../resources/images/partner_2.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_3.png"),
+      img: require("../../../../resources/images/partner_3.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_4.png"),
+      img: require("../../../../resources/images/partner_4.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_5.png"),
+      img: require("../../../../resources/images/partner_5.webp"),
     },
     {
-      img: require("../../../../resources/images/partner_6.png"),
+      img: require("../../../../resources/images/partner_6.webp"),
     },
   ],
 };
