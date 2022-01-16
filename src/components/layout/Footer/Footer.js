@@ -71,7 +71,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="http://jussmor.com/">Testimonials</a>
+            <a href="http://jussmor.com/" className={styles.navLink}>Testimonials</a>
           </li>
           <li>
             <a href="http://jussmor.com/" className={styles.navLink}>
@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
       </article>
       <ul className={styles.credits}>
-        <li>© Copyright 2019. All Rights Reserved.</li>
+        <li>© Copyright 2022. All Rights Reserved.</li>
         <li>
           site template by{" "}
           <a href="https://jussmor.com/"

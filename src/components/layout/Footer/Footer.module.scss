@@ -6,7 +6,7 @@
 .footer {
     padding:80px 20px 40px;
     position: relative;
-    background: url("../../../resources/images/bg_footer.jpg") no-repeat center top;
+    background: url("../../../resources/images/bg_footer.jpg") no-repeat center top; 
     background-size: cover;
     .header{ 
         h2{
@@ -63,36 +63,40 @@
                     background: $color_white;
                     display: none;
                 }
-                a:not([href]):not([tabindex]){
-                    color: $color_white;
-                    font-family: $intro_regular;
-                    @include font12();
-                    cursor: pointer;
-                    position: relative;
-                    padding-bottom: 10px;
-                    &:after{
-                        @include afterBefore();
-                        height: 4px;
-                        width: 0;
-                        bottom:-2px;
-                        left: 0;
-                        background: $color_brown;
-                        overflow: hidden;
-                        visibility: hidden;
-                        transition: 0.4s;
-                    }
-                    &:hover, &:focus, &.active {
-                        &:after{
-                            width: 100%;
-                            overflow: visible;
-                            visibility: visible;
-                        }
-                        a{
-                            color: $color_brown;
-                        }
-                    }
-                }
+                // a:not([href]):not([tabindex]){
+                //     color: $color_white;
+                //     font-family: $intro_regular;
+                //     @include font12();
+                //     cursor: pointer;
+                //     position: relative;
+                //     padding-bottom: 10px;
+                //     &:after{
+                //         @include afterBefore();
+                //         height: 4px;
+                //         width: 0;
+                //         bottom:-2px;
+                //         left: 0;
+                //         background: $color_brown;
+                //         overflow: hidden;
+                //         visibility: hidden;
+                //         transition: 0.4s;
+                //     }
+                //     &:hover, &:focus, &.active {
+                //         &:after{
+                //             width: 100%;
+                //             overflow: visible;
+                //             visibility: visible;
+                //         }
+                //         a{
+                //             color: $color_brown;
+                //         }
+                //     }
+                // }
             }
+        }
+        .navLink {
+            color:$color_white;
+            font-family: $intro_regular;
         }
         .bottom{
             >ul{
@@ -177,7 +181,6 @@
     @media screen and (min-width: 768px) {
         padding:140px 20px 40px;
         article{
-            margin: 60px 0 0;
             >ul{
                 min-height: 80px;
                 flex-flow:row nowrap;
@@ -220,6 +223,9 @@
         }
     }
     @media screen and (max-width: 560px) {
+        article {
+            margin: 20px 0px 0px 0px;
+        }
         .credits{
             flex-flow:column nowrap;
             li{
@@ -245,6 +251,7 @@
             }
         }
         article{
+            margin: 20px 0px 0px 0px;
             >ul{
                 li{
                     padding: 0 60px;
@@ -253,9 +260,32 @@
         }
     }
     @media screen and (min-width: 1240px) {
+        article {
+            margin: 20px 30px 0px 30px;
+        }
         .content{
             max-width: 1200px;
             margin: 0 auto;
         }
     }
+    @media screen and (min-width: 1640px) {
+        article {
+            margin: 20px 180px 0px 180px
+        }
+        .content{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (min-width: 1800px) {
+        article {
+            margin: 20px 280px 0px 280px
+        }
+        .content{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+    
 }
