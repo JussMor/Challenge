@@ -19,11 +19,24 @@
         top: 600px;
         right: -130px;
     }
+
     .programsContent{
         padding:40px 20px;
         margin: 0 auto;
         position: relative;
         z-index: 1;
+        .header {
+            h2{
+                color: $color_dark;
+            }
+            svg{
+                color: $color_dark;
+            }
+            p{
+                padding-top: 10px;
+                padding-bottom: 30px;
+            }
+        }
         .tabSliderNav{
             .tabSlider{
                 .nameBackground{

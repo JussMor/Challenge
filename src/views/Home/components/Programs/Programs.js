@@ -74,10 +74,10 @@ export default class Programs extends Component {
                     <img src={this.props.coffe1} alt="Coffe Make" className={styles.coffe1}/>
                     <img src={this.props.coffe2} alt="Coffe Make" className={styles.coffe2}/>
                     <div className={styles.programsContent}>
-                        <HeaderSections classes={styles.header} icon={star} title="Programs" subtitle="We share their experience and professional barista championships multiple winners" />
+                        <HeaderSections  classes={styles.header} icon={star} title="Programs" subtitle="We share their experience and professional barista championships multiple winners" />
                         <div className={`tab-slider-nav ${styles.tabSliderNav}`}>
                             <div className={`tab-slider ${styles.tabSlider}`}>
-                                <Tabs defaultActiveKey="basic" id="uncontrolled-tab">
+                                <Tabs fill className="justify-content-center  "  defaultActiveKey="basic" id="uncontrolled-tab">
                                     <Tab eventKey="basic" title="Basic">
                                         <div className={styles.nameBackground}>basic</div>
                                         <div className={styles.top}>
