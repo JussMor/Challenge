@@ -49,6 +49,19 @@ and search for the following line. it should be the line 19 and both should be  
 const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 ```
 
-## TEST
+## LIGHTHOUSE
+
+I use lighthouse in devtools to generate a report about, performance, accesibility, SEO, Best Practices and this is was my result. I use Edge Chrome  in a private window to get this result:
+
+### Desktop
+
+<img align="center" src="https://github.com/JussMor/Challenge/blob/master/photos/destokp-test.png" alt="Desktop"  />
+
+### Mobile
+
+<img align="center" src="https://github.com/JussMor/Challenge/blob/master/photos/mobile-test.png" alt="Mobile"  />
+
+
+
 
 
