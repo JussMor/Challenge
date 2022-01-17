@@ -61,6 +61,10 @@ I use lighthouse in devtools to generate a report about, performance, accesibili
 
 <img align="center" src="https://github.com/JussMor/Challenge/blob/master/photos/mobile-test.png" alt="Mobile"  />
 
+## acknowledgments
+
+Thank you to JOBSITY. 
+
 
 
 
