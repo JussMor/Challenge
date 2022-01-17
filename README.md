@@ -9,7 +9,7 @@ Link: [Coffie Marker Website]( https://elit-a1a7a.web.app/ ) 👈🏃‍♂️ R
 ## SETUP
 
 Requirements:
-- Node: 16.13.1
+- Node: >=16.13.1
 - npm: 8.3.1
 - git
 
