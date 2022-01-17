@@ -13,12 +13,12 @@ Requirements:
 - npm: 8.3.1
 - git
 
-First clone this repo in local 
+First clone this repo on local 
 ```
 git clone https://github.com/JussMor/Challenge.git
 ```
 
-Now inside of the directory where you download the repo run this command to install all the dependencies:
+Now inside of the directory where you downloaded the repo run this command to install all the dependencies:
 ```
 npm install 
 ```
@@ -36,7 +36,7 @@ npm run build
 ```
  Note: I created this project with created-react-app and I don't understand why when I try to generate the production build the console give me a error:
 
- If you have this error 
+ If You have this error: 
  ```
  TypeError: MiniCssExtractPlugin is not a constructor
  ```
@@ -51,7 +51,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 
 ## LIGHTHOUSE
 
-I use lighthouse in devtools to generate a report about, performance, accesibility, SEO, Best Practices and this  was my result. I use Edge Chrome  in a private window to get this result:
+I used lighthouse in devtools to generate a report about, performance, accesibility, SEO, best practices and this  was my result. I used Edge Chrome  in a private window to get this result:
 
 ### Desktop
 
