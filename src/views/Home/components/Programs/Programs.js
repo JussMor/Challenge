@@ -100,6 +100,7 @@ export default class Programs extends Component {
       { id: 39, icon: times, list: "5 views Latte Art - Espresso with milk" },
       { id: 40, icon: times, list: "6 views Latte Art - Mixed" },
     ],
+    
   };
 
   render() {

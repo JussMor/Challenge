@@ -48,9 +48,9 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.48.0",
-    "sass-loader": "^12.4.0",
     "firebase": "^9.6.3",
-    "firebase-tools": "^10.1.0"
+    "firebase-tools": "^10.1.0",
+    "sass": "^1.48.0",
+    "sass-loader": "^12.4.0"
   }
 }

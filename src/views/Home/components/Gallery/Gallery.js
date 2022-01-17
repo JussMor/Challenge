@@ -1,14 +1,22 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./Gallery.module.scss";
 import HeaderSections from "../../../../components/common/HeaderSection/HeaderSection";
 import OwlCarousel from "react-owl-carousel";
 
 export default function Gallery(props) {
+
+  const [offsetY, setOffset] = useState(0);
+  const handleScroll = (e) => setOffset(window.scrollY);
   const galleryImages = props.galleryImages.map((item, index) => (
     <div className={`${item.class} ${styles.picture}`} key={index}>
       <img src={item.image} alt="client" />
     </div>
   ));
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return ( ) => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const icon = (
     <img src={props.icon} alt="Coffe Make" className={styles.icon} />
@@ -17,8 +25,8 @@ export default function Gallery(props) {
   return (
     <>
       <section id="gallery" className={styles.gallery}>
-        <img src={props.coffe1} alt="Coffe Make" className={styles.coffe1} />
-        <img src={props.coffe2} alt="Coffe Make" className={styles.coffe2} />
+        <img src={props.coffe1} alt="Coffe Make" className={styles.coffe1} style={{ transform: `translateY(-${offsetY * 0.2}px)` }} />
+        <img src={props.coffe2} alt="Coffe Make" className={styles.coffe2} style={{ transform: `translateY(-${offsetY * 0.2}px)` }}/>
         <div className={styles.galleryContainer}>
           <HeaderSections
             classes={styles.header}
