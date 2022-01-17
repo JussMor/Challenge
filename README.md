@@ -63,7 +63,7 @@ I used lighthouse in devtools to generate a report about, performance, accesibil
 
 ## ACKNOWLEDGMENTS
 
-Thank you to JOBSITY. 
+Thank You to [JOBSITY](https://www.jobsity.com/). 
 
 
 

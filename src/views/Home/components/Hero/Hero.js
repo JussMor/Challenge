@@ -16,7 +16,7 @@ export default function Hero(props) {
             <span>{star}</span>
           </div>
           <div className={styles.subtitle}>
-            <p>Intensive program barista training</p>
+            <p data-testid="hero" >Intensive program barista training</p>
           </div>
           <h1 className={styles.title}>
             Barista Training in <span>amsterdam</span>

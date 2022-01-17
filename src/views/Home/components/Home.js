@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
     
-      <NavBar/> {/*Solo Falta el logo  */}
+      <NavBar/> {/*Listo  */}
 
       <Hero/> {/* Listo*/}
 
@@ -21,11 +21,11 @@ export default function Home() {
 
       <Gallery /> {/*Listo*/}
 
-      <Testimonial/> {/* */}
+      <Testimonial/> {/* Listo*/}
 
       <Partners/> {/* Listo*/}
 
-      <Contact/> {/* */}
+      <Contact/> {/*Listo */}
       
       <Footer /> {/*Listo */}
     </>

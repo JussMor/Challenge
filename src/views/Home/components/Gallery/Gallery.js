@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Gallery.module.scss";
 import HeaderSections from "../../../../components/common/HeaderSection/HeaderSection";
-// import Slider from "react-slick";
 import OwlCarousel from "react-owl-carousel";
 
 export default function Gallery(props) {

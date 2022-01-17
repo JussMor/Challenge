@@ -124,7 +124,7 @@ export default class Programs extends Component {
     ));
     return (
       <>
-        <section id="programs" className={styles.programs}>
+        <section data-testid="programs" id="programs" className={styles.programs}>
           <img
             src={this.props.coffe1}
             alt="Coffe Make"
@@ -204,7 +204,7 @@ export default class Programs extends Component {
                           bean. and Stage <br />
                           types of roasting.
                         </h4>
-                        <ul>{roasting}</ul>
+                        <ul>{roasting}</ul> 
                       </div>
                     </div>
                     <div className={styles.bottom}>
