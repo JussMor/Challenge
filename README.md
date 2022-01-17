@@ -51,7 +51,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 
 ## LIGHTHOUSE
 
-I use lighthouse in devtools to generate a report about, performance, accesibility, SEO, Best Practices and this is was my result. I use Edge Chrome  in a private window to get this result:
+I use lighthouse in devtools to generate a report about, performance, accesibility, SEO, Best Practices and this  was my result. I use Edge Chrome  in a private window to get this result:
 
 ### Desktop
 
