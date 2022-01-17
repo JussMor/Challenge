@@ -48,7 +48,15 @@ and search for the following line. it should be the line 19 and both should be  
 ```
 const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 ```
+## TEST 
+Tests are an important part  in software development, I writed 4 test cases in the following components:
+Hero.test.js
+Programs.test.js
 
+To execute the test run the following command:
+```
+npm run test
+```
 ## LIGHTHOUSE
 
 I used lighthouse in devtools to generate a report about, performance, accesibility, SEO, best practices and this  was my result. I used Edge Chrome  in a private window to get this result:
