@@ -50,8 +50,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 ```
 ## TEST 
 Tests are an important part  in software development, I writed 4 test cases in the following components:
-Hero.test.js
-Programs.test.js
+- Hero.test.js
+- Programs.test.js
 
 To execute the test run the following command:
 ```
