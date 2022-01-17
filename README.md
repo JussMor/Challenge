@@ -59,7 +59,7 @@ npm run test
 ```
 ## LIGHTHOUSE
 
-I used lighthouse in devtools to generate a report about, performance, accesibility, SEO, best practices and this  was my result. I used Edge Chrome  in a private window to get this result:
+I used lighthouse in devtools to generate a report about, performance, accesibility, SEO, best practices and this  was my result also Edge Chrome  in a private window to get this result:
 
 ### Desktop
 
