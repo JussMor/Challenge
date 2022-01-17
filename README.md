@@ -1,13 +1,13 @@
 # **CHALLENGE**  😊
 ## HOSTED  
----
+
 <p >The final result of this project was hosted in firebase. Click in link to see the final result.</p>
 
 
 Link: [Coffie Marker Website]( https://elit-a1a7a.web.app/ ) 👈🏃‍♂️ Run to see it.
 
 ## SETUP
----
+
 Requirements:
 - Node: 16.13.1
 - npm: 8.3.1
@@ -29,7 +29,7 @@ npm run start
 ```
 Cool now the project is running. Happy Coding 👨
 ## BUILD
----
+
 Ready to production?
 ```
 npm run build
