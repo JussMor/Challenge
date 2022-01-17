@@ -49,7 +49,7 @@ and search for the following line. It should be the line 19 and both should be  
 const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 ```
 ## TEST 
-Tests are an important part  in software development, I writed 4 test cases in the following components:
+Tests are an important part  in software development, I wrote 4 test cases in the following components:
 - Hero.test.js
 - Programs.test.js
 
