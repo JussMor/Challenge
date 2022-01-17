@@ -27,16 +27,16 @@ Now run the next command  to initialized the local server:
 ```
 npm run start
 ```
-Cool now the project is running. Happy Coding 👨
+Cool, now the project is running. Happy Coding 👨
 ## BUILD
 
 Ready to production?
 ```
 npm run build
 ```
- Note: I created this project with created-react-app and I don't understand why when I try to generate the production build the console give me a error:
+ Note: I created this project with created-react-app and I don't understand why when I try to generate the production build the console gives me a error:
 
- If You have this error: 
+ If you have this error: 
  ```
  TypeError: MiniCssExtractPlugin is not a constructor
  ```
@@ -44,7 +44,7 @@ To resolve this error => Go to the following path
 ```
 node_modules/react-scripts/config/webpack.config.js
 ```
-and search for the following line. it should be the line 19 and both should be  equals
+and search for the following line. It should be the line 19 and both should be  equals
 ```
 const MiniCssExtractPlugin = require('mini-css-extract-plugin').default;
 ```
